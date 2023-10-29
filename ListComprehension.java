@@ -22,6 +22,8 @@ public class ListComprehension <P, R> {
 			l.add (i);
 		}
 		ArrayList <String> ls2 = ListComprehension.make (e -> e + " is a number!!", e -> e % 2 == 0, l);
+		//A list comprehension acima eh equivalente à seguinte em Python:
+			//[e + " is a number!!" for e in l if e % 2 == 0]
 		System.out.println (ls2);
 	}
 }
