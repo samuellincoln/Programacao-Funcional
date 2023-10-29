@@ -15,4 +15,13 @@ public class ListComprehension <P, R> {
 		list.forEach (e -> {if (c.apply(e)) {ret.add (exp.apply (e));}});
 		return ret;
 	}
+	public static void main (String [] args) {
+		final Integer MAX = 10;
+		ArrayList <Integer> l = new ArrayList <Integer> ();
+		for (int i = 0; i < MAX; i++) {
+			l.add (i);
+		}
+		ArrayList <String> ls2 = ListComprehension.make (e -> e + " is a number!!", e -> e % 2 == 0, l);
+		System.out.println (ls2);
+	}
 }
