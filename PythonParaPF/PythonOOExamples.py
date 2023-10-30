@@ -1,3 +1,4 @@
+import datetime
 #public class SerVivo {
 #    Date data_nascimento;
 #    public SerVivo (Date data_nascimento) {
@@ -56,6 +57,6 @@ class Cachorro (SerVivo) :
 #        Cachorro c = new Cachorro (new Date (), "Shurastey", "Golden Retriever");
 #        System.out.println (c.toString());
 #    }
-c = Cachorro ("29.10.2023", "Shurastey", "Golden Retriever")
+c = Cachorro (datetime.datetime.now(), "Shurastey", "Golden Retriever")
 print (c.toString())
 #}
