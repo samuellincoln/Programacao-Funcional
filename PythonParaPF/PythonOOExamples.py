@@ -1,4 +1,37 @@
 import datetime
+from abc import ABC, abstractmethod
+class Locomocao (ABC):
+    @abstractmethod
+    def virevolante (self) :
+        pass
+    @abstractmethod
+    def freie (self) :
+        pass
+    @abstractmethod
+    def acelere (self) :
+        pass
+    @abstractmethod
+    def pise_na_embreagem (self) :
+        pass
+class Carro (Locomocao) :
+    def __init__ (self, marca, ano) :
+        self.__marca = marca
+        self.__ano = ano
+    def toString (self) :
+        return "Carro (" + self.__marca + ", " + self.__ano + ")"
+    def virevolante (self) :
+        print ("Volante virado")
+    def freie (self) :
+        print ("Freou carro")
+    def acelere (self) :
+        print ("Acelerou carro")
+    def pise_na_embreagem (self) :
+        print ("Pisou na embreagem")
+
+
+c = (Carro ("Honda", "2023"))
+print (c.toString())
+
 #public class SerVivo {
 #    Date data_nascimento;
 #    public SerVivo (Date data_nascimento) {
